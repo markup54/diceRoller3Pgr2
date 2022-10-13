@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/nauczyciel/AndroidStudioProjects/Dice3Pgr2/app/src/main/res/drawable/dice_1.xml" value="0.2894069944247339" />
+        <entry key="..\:/Users/nauczyciel/AndroidStudioProjects/Dice3Pgr2/app/src/main/res/drawable/dice_2.xml" value="0.2894069944247339" />
+        <entry key="..\:/Users/nauczyciel/AndroidStudioProjects/Dice3Pgr2/app/src/main/res/drawable/dice_3.xml" value="0.2894069944247339" />
+        <entry key="..\:/Users/nauczyciel/AndroidStudioProjects/Dice3Pgr2/app/src/main/res/drawable/dice_4.xml" value="0.2894069944247339" />
+        <entry key="..\:/Users/nauczyciel/AndroidStudioProjects/Dice3Pgr2/app/src/main/res/drawable/dice_5.xml" value="0.2894069944247339" />
+        <entry key="..\:/Users/nauczyciel/AndroidStudioProjects/Dice3Pgr2/app/src/main/res/drawable/dice_6.xml" value="0.2894069944247339" />
         <entry key="..\:/Users/nauczyciel/AndroidStudioProjects/Dice3Pgr2/app/src/main/res/layout/activity_main.xml" value="0.18931159420289856" />
       </map>
     </option>
