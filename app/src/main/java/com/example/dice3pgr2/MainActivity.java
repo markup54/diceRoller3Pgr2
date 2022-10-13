@@ -7,32 +7,46 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    public Integer wylosowanaLiczba;
-    public ArrayList<Integer> obrazkiKosci = new ArrayList<>();
+
+    ArrayList<ImageView> diceImageView = new ArrayList<>();
+    Button diceButton;
+    ArrayList<Dice> rolledDices = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        obrazkiKosci.add(R.drawable.dice_1);
-        obrazkiKosci.add(R.drawable.dice_2);
-        obrazkiKosci.add(R.drawable.dice_3);
-        obrazkiKosci.add(R.drawable.dice_4);
-        obrazkiKosci.add(R.drawable.dice_5);
-        obrazkiKosci.add(R.drawable.dice_6);
-        Button diceButton = findViewById(R.id.button);
-        TextView diceTextView = findViewById(R.id.textView);
-        ImageView diceImageView = findViewById(R.id.imageView);
+
+        diceImageView.add(findViewById(R.id.imageView1));
+        diceImageView.add(findViewById(R.id.imageView2));
+        diceImageView.add(findViewById(R.id.imageView3));
+        diceImageView.add(findViewById(R.id.imageView4));
+        diceImageView.add(findViewById(R.id.imageView5));
+
+        diceButton = findViewById(R.id.button);
+        diceImageView.get(0).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,
+                        "kliknięto",
+                        Toast.LENGTH_SHORT)
+                        .show();
+            }
+        });
         diceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                wylosowanaLiczba = (int)(Math.random()*6+1);
-                diceTextView.setText(wylosowanaLiczba.toString());
-                diceImageView.setImageResource(obrazkiKosci.get(wylosowanaLiczba-1));
+                for(int i=0;i<5;i++){
+                    Dice dice = new Dice();
+                    rolledDices.add(dice);
+                    diceImageView.get(i).setImageResource(dice.getIdImage());
+                }
+
             }
         });
     }
